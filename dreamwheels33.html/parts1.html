@@ -1,0 +1,567 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.freebiesupply.com/logos/large/2x/hot-wheels-5-logo-black-and-white.png" type="image/png">
+  <title>Luxury Shopify Style</title>
+
+<style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    /* Header Styling */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: linear-gradient(90deg, #000, #1a1a1a);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    }
+
+    .logo img {
+      height: 45px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-icon img {
+      width: 35px;
+      height: 35px;
+      filter: invert(1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-icon img:hover {
+      transform: rotate(90deg);
+    }
+
+    /* Mobile Menu */
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      width: 75%;
+      max-width: 320px;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      transition: right 0.4s ease;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.6);
+    }
+
+    .nav-links a {
+      padding: 18px 25px;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #222;
+      transition: color 0.3s, padding-left 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+      padding-left: 35px;
+    }
+
+    .nav-links .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .nav-links .close-btn:hover {
+      color: gold;
+    }
+
+    .nav-active {
+      right: 0;
+    }
+
+    /* Section Title */
+    h1.section-title {
+      text-align: center;
+      font-weight: bold;
+      font-style: italic;
+      color: white;
+      margin: 30px 0;
+      letter-spacing: 2px;
+    }
+
+    /* Product Cards */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      color: #000;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000; /* Black background */
+      color: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 20px;
+      color: #fff;
+      border-bottom: 2px solid #444;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #ffcc00; /* Gold accent */
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ffaa00;
+    }
+
+    .btn img {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="https://logoeps.com/wp-content/uploads/2013/03/hot-wheels-art-vector-logo.png" alt="Luxury Logo">
+    </a>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <img src="https://cdn-icons-png.flaticon.com/128/8765/8765813.png" alt="Menu">
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="nav-links">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+    <a href="hotwheels1.html">Home</a>
+    <a href="shope1.html">Shop</a>
+    <a href="parts1.html">Parts</a>
+    <a href="contact1.html">Contact</a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("nav-active");
+    }
+  </script>
+
+
+
+
+  
+  <nav id="mobileMenu" class="nav-links">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+    <a href="hotwheels.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="parts.html">Parts</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("nav-active");
+    }
+  </script>
+
+
+
+  
+<!-- WHEELS / RIMS Section -->
+<header class="category-header">
+  <a href="parts1.html" class="box">WHEELS</a>
+  <a href="wheels1.html" class="box">RIMS</a>
+</header>
+
+<style>
+  .category-header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 10px;
+    background-color: #111;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  .category-header .box {
+    padding: 12px 24px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .category-header .box:hover {
+    background-color: #ffaa00;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 600px) {
+    .category-header .box {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+</style>
+
+ 
+ 
+  <h1 class="section-title">BODY PARTS</h1>
+
+  <!-- Product Section -->
+  <div class="container">
+  <!-- Box 1 -->
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/91Dp4K9NB5L._UF894%2C1000_QL80_.jpg" alt="Product 1">
+    <div class="card-content">
+      <h3>Product One</h3>
+      <p>Sports tyres.</p>
+      <a href="https://www.daraz.pk/products/4-164-i511054294.html?spm=a2a0e.searchlist.list.43.1e034bb3BHSmOH" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/71Dq-In4R3L._UF894%2C1000_QL80_.jpg" alt="Product 2">
+    <div class="card-content">
+      <h3>Product Two</h3>
+      <p>Sports tyres.</p>
+      <a href="https://www.daraz.pk/products/164-i469157066.html?spm=a2a0e.searchlist.list.19.1e034bb3BHSmOH" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Box 3 -->
+  <div class="card">
+    <img src="https://i.ebayimg.com/images/g/O~oAAOSwLZdmjnRo/s-l1200.jpg" alt="Product 3">
+    <div class="card-content">
+      <h3>Product Three</h3>
+      <p>Sports tyres.</p>
+      <a href="https://www.daraz.pk/products/1-1-64-diy-i469151488.html?spm=a2a0e.searchlist.list.5.1e034bb3BHSmOH" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Box 4 -->
+  <div class="card">
+    <img src="https://i.ebayimg.com/thumbs/images/g/4NoAAOSwcili8vMY/s-l1200.jpg" alt="Product 4">
+    <div class="card-content">
+      <h3>Product Four</h3>
+      <p>Sports tyres.</p>
+      <a href="https://www.daraz.pk/products/164-112-i920324754.html?spm=a2a0e.searchlist.list.15.1e034bb3BHSmOH" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Box 5 -->
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/71RrHZwcGmL.jpg" alt="Product 5">
+    <div class="card-content">
+      <h3>Product Five</h3>
+      <p>1:24 scale tyres.</p>
+      <a href="https://www.etsy.com/listing/1793032738/124-scale-25-rucci-style-full-wheel-set?click_key=dad7f29c-287e-40db-9ac8-5f6e25142f62%3Addd979a58f168e7b5de91a8ab26e222bf2f7f0eb&amp;click_sum=a63874de&amp;ls=s&amp;ga_order=most_relevant&amp;ga_search_type=all&amp;ga_view_type=gallery&amp;ga_search_query=1%2F24+model+tires&amp;ref=search_grid-350755-1-5&amp;sts=1&amp;content_source=dad7f29c-287e-40db-9ac8-5f6e25142f62%253Addd979a58f168e7b5de91a8ab26e222bf2f7f0eb" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Box 6 -->
+  <div class="card">
+    <img src="https://media.spotmodel.com/images/Scale%20Production/SPRF24158-TOYO.jpg" alt="Product 6">
+    <div class="card-content">
+      <h3>Product Six</h3>
+      <p>1:24 scale tyres.</p>
+      <a href="https://www.etsy.com/listing/1496350331/12425-scale-resin-3d-printed-pro-touring?click_key=dad7f29c-287e-40db-9ac8-5f6e25142f62%3A81a8c822672266502e0e18c6796397bac49cd26a&amp;click_sum=03e2bc92&amp;ls=s&amp;ga_order=most_relevant&amp;ga_search_type=all&amp;ga_view_type=gallery&amp;ga_search_query=1%2F24+model+tires&amp;ref=search_grid-19855-1-3&amp;sts=1&amp;content_source=dad7f29c-287e-40db-9ac8-5f6e25142f62%253A81a8c822672266502e0e18c6796397bac49cd26a" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+  <!-- Box 7 -->
+  <div class="card">
+    <img src="https://images.51microshop.com/8867/product/20231010/1_24_Scale_Model_Car_Kit_19_Toyo_R888R_245_35_R19_Tires_HobbyDesign_1696948450184_1.jpg" alt="Product 7">
+    <div class="card-content">
+      <h3>Product Seven</h3>
+      <p>1:24 scale tyres</p>
+      <a href="https://www.etsy.com/listing/1761493515/hre-935-resin-wheels-and-tires-set-187?click_key=dad7f29c-287e-40db-9ac8-5f6e25142f62%3A2248716b1de528f267d9d4ba61766dc9ebf5e17c&amp;click_sum=52a5b825&amp;ls=s&amp;ga_order=most_relevant&amp;ga_search_type=all&amp;ga_view_type=gallery&amp;ga_search_query=1%2F24+model+tires&amp;ref=search_grid-350755-1-8&amp;frs=1&amp;content_source=dad7f29c-287e-40db-9ac8-5f6e25142f62%253A2248716b1de528f267d9d4ba61766dc9ebf5e17c" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+  <!-- Box 8 -->
+  <div class="card">
+    <img src="https://131222325.cdn6.editmysite.com/uploads/1/3/1/2/131222325/Y6BBDL6KZ3DHHBLNXW5MS7PV.jpeg" alt="Product 8">
+    <div class="card-content">
+      <h3>Product Eight</h3>
+      <p>1:64 scale. </p>
+      <a href="https://www.daraz.pk/products/4-164-i411991153.html?spm=a2a0e.searchlist.list.11.13196f0e1xxoem" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+        Shop Now
+      </a>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("nav-active");
+    }
+  </script>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo & About -->
+    <div class="footer-col">
+      <h2 class="footer-logo">🔥 Hot Wheels</h2>
+      <p>Collect. Race. Repeat. Explore our world of die-cast cars and thrilling models.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="hotwheels1.html">Home</a></li>
+        <li><a href="shop1.html">Shop</a></li>
+        <li><a href="parts1.html">Parts</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer Support -->
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+        <li><a href="contact1.html">Contact Us</a></li>
+        <li><a href="track.html">Track Order</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Hot Wheels. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Footer CSS -->
+<style>
+.footer {
+  background: linear-gradient(135deg, #ff0000, #111);
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+}
+
+.footer-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  color: #ffd700;
+  font-size: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffd700;
+}
+
+.social-icons a img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+</style>
+
+
+
+
+</body></html>

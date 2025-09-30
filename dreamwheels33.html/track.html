@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="https://cdn.freebiesupply.com/logos/large/2x/hot-wheels-5-logo-black-and-white.png" type="image/png">
+  <title>Track My Order</title>
+  <style>
+    /* ===== Reset & Global ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #222;
+    }
+
+    .track-container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    /* ===== Progress Bar ===== */
+    .progress-container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .progress-container::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 80%;
+      height: 4px;
+      background-color: #e0e0e0;
+      z-index: 1;
+    }
+
+    .step {
+      position: relative;
+      z-index: 2;
+      width: 25%;
+      text-align: center;
+    }
+
+    .step .circle {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: auto;
+      line-height: 40px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .step.completed .circle {
+      background-color: #28a745;
+    }
+
+    .step.current .circle {
+      background-color: #ffc107;
+    }
+
+    .step p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* ===== Order Info Box ===== */
+    .order-info {
+      background-color: #fafafa;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid #007bff;
+      margin-bottom: 20px;
+    }
+
+    .order-info h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .order-info p {
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .progress-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .progress-container::before {
+        display: none;
+      }
+
+      .step {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Track My Order</h1>
+
+  <div class="track-container">
+
+    <!-- Order Info -->
+    <div class="order-info">
+      <h3>Order ID: <strong>#HW20250929</strong></h3>
+      <p>Estimated Delivery: <strong>October 2, 2025</strong></p>
+      <p>Shipping Carrier: <strong>FastX Express</strong></p>
+      <p>Tracking Number: <strong>FX123456789</strong></p>
+    </div>
+
+    <!-- Order Progress -->
+    <div class="progress-container">
+      <div class="step completed">
+        <div class="circle">1</div>
+        <p>Order Placed</p>
+      </div>
+      <div class="step completed">
+        <div class="circle">2</div>
+        <p>Shipped</p>
+      </div>
+      <div class="step current">
+        <div class="circle">3</div>
+        <p>Out for Delivery</p>
+      </div>
+      <div class="step">
+        <div class="circle">4</div>
+        <p>Delivered</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo & About -->
+    <div class="footer-col">
+      <h2 class="footer-logo">🔥 Hot Wheels</h2>
+      <p>Collect. Race. Repeat. Explore our world of die-cast cars and thrilling models.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="hotwheels1.html">Home</a></li>
+        <li><a href="shope1.html">Shop</a></li>
+        <li><a href="parts1.html">Part</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer Support -->
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+        <li><a href="contact1.html">Contact Us</a></li>
+        <li><a href="track.html">Track Order</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Hot Wheels. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Footer CSS -->
+<style>
+.footer {
+  background: linear-gradient(135deg, #ff0000, #111);
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+}
+
+.footer-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  color: #ffd700;
+  font-size: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffd700;
+}
+
+.social-icons a img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+</style>
+
+
+
+</body></html>
